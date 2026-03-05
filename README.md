@@ -32,3 +32,14 @@ FFA Group Project: Forecasting quarterly nominal GDP growth rate in the US using
 - We are currently using *compustat_quarterly_financials2* for accounting data, *compustat_quarterly_financials* only had assets, liabilities and net income.
 - We are using *GDP_PCA_for_test* which is not accurate, but close enough data to the 2015 - 2020 NGDP data used in Kaggle. This is so we can have a better estimate of our RMSE to prevent us from needing to reupload our output to Kaggle when testing.
 - *main.ipynb* will always be the most updated code file
+
+
+### PROGRESS
+
+`formula5 = "NGDP ~ year + revtq_lag + xrdq_growth_lag + invtq + ppentq + oibdpq"`
+`formula6 = "NGDP ~ year + revtq_lag + xrdq_growth_lag + invtq + ppentq + oibdpq_lag"`
+
+^ Same Kaggle score, but based on:
+- Chisq test: `formula5` performs better
+- RMSE score: `formula6` performs better
+- Adj. R^2: `formula5` performs better
