@@ -43,3 +43,5 @@ FFA Group Project: Forecasting quarterly nominal GDP growth rate in the US using
 - Chisq test: `formula5` performs better
 - RMSE score: `formula6` performs better
 - Adj. R^2: `formula5` performs better
+
+Tested Lasso, Ridge and ElasticNet on accounting macro, recognised `ppentq_lag` and `xrdq_lag` as strong consistent signals, but noted that regression performance not strong, suggesting accounting macro is insufficient as a standalone predictor of Nominal GDP Growth.
