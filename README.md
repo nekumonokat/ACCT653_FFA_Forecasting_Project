@@ -79,5 +79,6 @@ Tested Lasso, Ridge and ElasticNet on accounting macro, recognised `ppentq_lag` 
 **MODEL WITH NON-FINANCIAL EXTERNAL INDICATORS**:
 - created indicators for `indpro` and `unrate`
 - trained model using `NGDP_lag1`, `INDPRO_PC1`, `INDPRO_lag1`, `UNRATE_change`, and `UNRATE_spike`
-- conducted recursive forecasting on the test set - calculated RMSE and MAE
-- validated model's performance against `GDP_PCA`
+- conducted recursive forecasting on the test set, validate performance against `GDP_PCA`
+- define stress flags for `UNRATE_change` to capture extra penalty for spikes in unemployment rate
+- conducted recursive forecasting on the test set, validate performance against `GDP_PCA`
