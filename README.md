@@ -82,3 +82,5 @@ Tested Lasso, Ridge and ElasticNet on accounting macro, recognised `ppentq_lag` 
 - conducted recursive forecasting on the test set, validate performance against `GDP_PCA`
 - define stress flags for `UNRATE_change` to capture extra penalty for spikes in unemployment rate
 - conducted recursive forecasting on the test set, validate performance against `GDP_PCA`
+- trained ML models: `Ridge`, `Random Forest`, `XGBoost` and designed ensemble model using stress flags
+- conducted recursive forecasting on the test set, validate performance against `GDP_PCA`
