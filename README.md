@@ -5,13 +5,10 @@ FFA Group Project: Forecasting quarterly nominal GDP growth rate in the US using
 ### Directories
 
 **Data Folder**
---| data/compustat_quarterly_financials.csv (not in use)
+
+--| data/compustat_quarterly_financials.csv (IN USE)
 
 --| data/compustat_quarterly_financials2.csv (not in use)
-
---| data/crsp_snp500_indexes.csv (not in use)
-
---| data/GDP_Forecast_sampleSubmission.csv (for reference)
 
 --| data/GDP_Forecast_test.csv (IN USE)
 
@@ -19,20 +16,15 @@ FFA Group Project: Forecasting quarterly nominal GDP growth rate in the US using
 
 --| data/GDP_PCA_for_test.csv (IN USE for validation)
 
---| data/HOUST_PCA.csv (not in use)
+--| data/INDPRO_PC1.csv (IN USE)
 
---| data/INDPRO_PC1.csv
-
---| data/INDPRO_PCA.csv (IN USE)
-
---| data/UNRATE_CH1.csv
-
---| data/UNRATE_PCA.csv (IN USE)
+--| data/UNRATE_CH1.csv (IN USE)
 
 
 **Reference Folder**: only for developer's reference
 
 **Files**
+
 --| .gitignore
 
 --| README.md
@@ -42,8 +34,6 @@ FFA Group Project: Forecasting quarterly nominal GDP growth rate in the US using
 --| draft.ipynb (co-lead's main file)
 
 --| reference.ipynb
-
---| ref_to_be_deleted.ipynb
 
 
 ### Data
@@ -83,4 +73,11 @@ Tested Lasso, Ridge and ElasticNet on accounting macro, recognised `ppentq_lag` 
 - define stress flags for `UNRATE_change` to capture extra penalty for spikes in unemployment rate
 - conducted recursive forecasting on the test set, validate performance against `GDP_PCA`
 - trained ML models: `Ridge`, `Random Forest`, `XGBoost` and designed ensemble model using stress flags
+- conducted recursive forecasting on the test set, validate performance against `GDP_PCA`
+- trained ensemble model with COVID-19 adjustments: used BEA data on GDP collapse and recovery bounce to offset spikes
+- conducted recursive forecasting on the test set, validate performance against `GDP_PCA`
+
+**MODEL WITH NON-FINANCIAL + FINANCIAL EXTERNAL INDICATORS**:
+- created indicators for `invtq`, `oibdpq`, `ppentq`, `revtq` and `xrdq`
+- trained ensemble model using NON-FINANCIAL macro and `corp_profit_growth_lag1`, `corp_revenue_growth_lag1`, `corp_capital_growth_lag1` and `corp_inventory_growth_lag1` with COVID-19 adjustments
 - conducted recursive forecasting on the test set, validate performance against `GDP_PCA`
